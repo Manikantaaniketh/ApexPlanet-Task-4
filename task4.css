@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 1.2em;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #ccc;
+}
+
+.section {
+  padding: 4em 1em;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.projects, .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.todo-container {
+  max-width: 400px;
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.todo-container input {
+  width: 70%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo-container button {
+  padding: 0.5em 1em;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.todo-container button:hover {
+  background: #0056b3;
+}
+
+#taskList {
+  list-style: none;
+  margin-top: 1em;
+  text-align: left;
+}
+#taskList li {
+  background: #f0f0f0;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#taskList li.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.filters select {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+form input, form textarea {
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    text-align: right;
+  }
+}

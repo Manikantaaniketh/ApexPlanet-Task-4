@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <link rel="stylesheet" href="task4.css">
+    <script src="task4.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">My Portfolio</h1>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm a front-end web developer passionate about creating clean, responsive, and interactive web apps using HTML, CSS, and JavaScript.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>my name is manikanta</p>
+      </div>
+      <div class="card">
+        <h3>To-Do App</h3>
+        <p>Persistent tasks using Local Storage</p>
+      </div>
+      <div class="card">
+        <h3>Product Page</h3>
+        <p>Filter and sort products dynamically</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="todo" class="section">
+    <h2>To-Do / Notes App</h2>
+    <div class="todo-container">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button id="addTask">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+  </section>
+
+
+  <section id="products" class="section">
+    <h2>Product Page</h2>
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="clothing">Clothing</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+      </select>
+
+      <select id="sortFilter">
+        <option value="">Sort By...</option>
+        <option value="rating">Highest Rating</option>
+        <option value="priceLow">Price: Low → High</option>
+        <option value="priceHigh">Price: High → Low</option>
+      </select>
+    </div>
+    <div id="productList" class="products"></div>
+  </section>
+
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
